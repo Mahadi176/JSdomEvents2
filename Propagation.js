@@ -1,45 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JS DOM EVENTS</title>
-    <style>
-        body{
-            border: 2px solid red;
-            margin: 2px;
-        }
-        section{
-            border: 2px solid green;
-            margin: 2px;
-        }
-        ul{
-            border: 2px solid purple;
-            margin: 2px;
-        }
-        li{
-            border: 2px solid blue;
-            margin: 2px;
-        }
-    </style>
-</head>
-<body id="body">
-    <h1>Explore Event Bubbles</h1>
-
-    <section id="item-section">
-        <h3>List Of Bubbles</h3>
-        <!-- ul>li#item-$*6>lorem2 -->
-        <ul id="item-list">
-            <li id="item-1">Lorem, ipsum.</li>
-            <li id="item-2">Veniam, eveniet?</li>
-            <li id="item-3">Architecto, distinctio?</li>
-            <li id="item-4">Veniam, doloribus.</li>
-            <li id="item-5">Sint, odio.</li>
-            <li id="item-6">Maiores, veniam?</li>
-        </ul>
-    </section>
-    <script>
-        document.getElementById('item-1')
+       document.getElementById('item-1')
         .addEventListener('click',function(event){
             event.stopPropagation()
             console.log('item-1 clicked')
@@ -84,7 +43,3 @@
             event.stopPropagation()
             console.log('body clicked')
         })
-    </script>
-    <script src="Propagation.js"></script>
-</body>
-</html>
